@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/buttons.dart';
 import 'package:todo_app/screens/activity_screen.dart';
-
+import 'package:todo_app/screens/list_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,17 +19,18 @@ class _HomeScreenStat extends State<HomeScreen> {
           child: Column(children: [
             const SizedBox(height: 40),
             Buttons(
-                text: 'Adicionar atividades', screen: const ActivityScreen(),                                        
-                ),
-            const SizedBox(height: 40),
-            Buttons(
-              text: 'Listar atividades',
-              screen: const HomeScreen(),
+              text: 'Adicionar atividades',
+              screen: const ActivityScreen(),
             ),
             const SizedBox(height: 40),
             Buttons(
-              text: 'Deletar atividade', screen: const HomeScreen(),
-              
+              text: 'Listar atividades',
+              screen: const ListActivities(),
+            ),
+            const SizedBox(height: 40),
+            Buttons(
+              text: 'Deletar atividade',
+              screen: const HomeScreen(),
             ),
           ]),
         ));

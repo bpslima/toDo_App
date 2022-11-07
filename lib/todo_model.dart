@@ -5,23 +5,13 @@ class TodoModel {
   final String title;
   final String subtitle;
   final String status;
-  TodoModel({
-    required this.title,
-    required this.subtitle,
-    required this.status,
-  });
+  final String? id;
 
-  TodoModel copyWith({
-    String? title,
-    String? subtitle,
-    String? status,
-  }) {
-    return TodoModel(
-      title: title ?? this.title,
-      subtitle: subtitle ?? this.subtitle,
-      status: status ?? this.status,
-    );
-  }
+  TodoModel(
+      {required this.title,
+      required this.subtitle,
+      required this.status,
+      this.id});
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
@@ -36,6 +26,7 @@ class TodoModel {
       title: map['title'] as String,
       subtitle: map['subtitle'] as String,
       status: map['status'] as String,
+      id: map['_id'] as String,
     );
   }
 

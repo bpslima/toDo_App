@@ -1,3 +1,4 @@
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:todo_app/home_controller.dart';
@@ -5,7 +6,8 @@ import 'package:todo_app/todo_model.dart';
 import 'package:http/http.dart' as http;
 
 class ActivityRepository {
-  final baseUrl = 'https://crudcrud.com/api/e5f22c4ad268489e980c771d4294e22c';
+  final baseUrl = 'https://crudcrud.com/api/b02b652f1c50415aab8e83d0005b8cd5';
+
   Future<bool> createActivity(TodoModel todo) async {
     final response = await http.post(
       Uri.parse('$baseUrl/todo'),
@@ -16,5 +18,19 @@ class ActivityRepository {
       },
     );
     return true;
+  }
+
+  Future<List<TodoModel>> getActivity() async {
+    final response = await http.get(Uri.parse('$baseUrl/todo'));
+    final list = List.from(jsonDecode(response.body));
+    final activitiesList = list.map((e) => TodoModel.fromMap(e)).toList();
+    return activitiesList;
+  }
+
+  Future<bool> deteleActivity(String id) async {
+    final response = await http.delete(
+      Uri.parse('$baseUrl/todo/$id'),
+    );
+    return response.statusCode == 200;
   }
 }
