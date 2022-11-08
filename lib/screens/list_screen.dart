@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/home_controller.dart';
 import 'package:todo_app/screens/home_repository.dart';
-import 'package:todo_app/screens/images.dart';
-import 'package:todo_app/screens/logo_bar.dart';
+import 'package:todo_app/components/images.dart';
+import 'package:todo_app/components/logo_bar.dart';
 import 'package:todo_app/todo_model.dart';
 
 class ListActivities extends StatefulWidget {

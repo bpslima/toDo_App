@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/screens/images.dart';
+import 'package:todo_app/components/images.dart';
 
 class LogoBar extends StatelessWidget {
   const LogoBar({super.key});

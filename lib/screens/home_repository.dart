@@ -12,7 +12,7 @@ class ActivityRepository {
   Future<bool> createActivity(TodoModel todo) async {
     final response = await http.post(
       Uri.parse('$baseUrl/todo'),
-      body: todo.toJson(),
+      body: todo.toJson(),  //para postar informações passando para String
       headers: {
         "content-type": "application/json",
         "accept": "application/json",
@@ -23,8 +23,8 @@ class ActivityRepository {
 
   Future<List<TodoModel>> getActivity() async {
     final response = await http.get(Uri.parse('$baseUrl/todo'));
-    final list = List.from(jsonDecode(response.body));
-    final activitiesList = list.map((e) => TodoModel.fromMap(e)).toList();
+    final list = List.from(jsonDecode(response.body)); //estou decodando as infos da API, transformando String em objeto no formato lista
+    final activitiesList = list.map((e) => TodoModel.fromMap(e)).toList(); //percorrer todos os itens
     return activitiesList;
   }
 
