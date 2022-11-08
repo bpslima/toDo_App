@@ -14,8 +14,8 @@ class _ButtonsState extends State<Buttons> {
   @override
   Widget build(BuildContext context) {
     return 
-    SizedBox(height: MediaQuery.of(context).size.height*0.1,
-    width: MediaQuery.of(context).size.width*0.22,
+    SizedBox(height: MediaQuery.of(context).size.height*0.08,
+    width: MediaQuery.of(context).size.width*0.5,
       child: ElevatedButton(
       style: ElevatedButton.styleFrom(
           backgroundColor: const Color.fromARGB(255, 1, 9, 77),

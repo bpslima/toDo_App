@@ -41,8 +41,8 @@ class _ActivityScreenState extends State<ActivityScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                   TextFormField(
-                      keyboardType:
-                          const TextInputType.numberWithOptions(signed: true),
+                     // keyboardType:
+                      //    const TextInputType.numberWithOptions(signed: true),
                       controller: titleController,
                       decoration: const InputDecoration(
                         hintText: 'Atividade',
@@ -51,8 +51,8 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       )),
                   //const SizedBox(height: 25),
                   TextFormField(
-                     keyboardType:
-                          const TextInputType.numberWithOptions(signed: true),
+                   //  keyboardType:
+                     //     const TextInputType.numberWithOptions(signed: true),
                       controller: subtitleController,
                       decoration: const InputDecoration(
                         hintText: 'Descrição',
