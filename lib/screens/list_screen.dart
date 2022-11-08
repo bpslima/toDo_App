@@ -31,6 +31,8 @@ class _ListActivitiesState extends State<ListActivities> {
                     final activityList = snapshot.data?[index];
                     return ListTile(
                         title: Text(activityList?.title ?? ''),
+                        subtitle: Text('${activityList?.subtitle ?? ''}, \n ${activityList?.status?? ''}'),                      
+                        isThreeLine: true,
                         trailing: IconButton(
                             icon: const Icon(Icons.delete),
                             onPressed: () async {

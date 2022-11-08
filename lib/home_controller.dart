@@ -4,8 +4,6 @@ import 'todo_model.dart';
 
 class HomeController {
   final ActivityRepository titleRepository;
-  // final SubtitleRepository subtitleRepository;
-  // final StatusRepository statusRepository;
 
   HomeController(this.titleRepository);
 

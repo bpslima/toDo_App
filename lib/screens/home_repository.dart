@@ -6,7 +6,8 @@ import 'package:todo_app/todo_model.dart';
 import 'package:http/http.dart' as http;
 
 class ActivityRepository {
-  final baseUrl = 'https://crudcrud.com/api/b02b652f1c50415aab8e83d0005b8cd5';
+  final baseUrl = 'https://crudcrud.com/api/55196b1f0e114e6a922e33742dfe91c2';
+
 
   Future<bool> createActivity(TodoModel todo) async {
     final response = await http.post(
